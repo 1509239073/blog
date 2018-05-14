@@ -1,0 +1,16 @@
+1.composer global require "laravel/installer"
+2.composer create-project laravel/laravel --prefer-dist blog
+3.https://github.com/z-song/laravel-admin
+3.1 composer require encore/laravel-admin
+3.2 php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
+3.3 php artisan admin:install 
+ex:error alter table `users` add unique `users_email_unique`(`email`)
+解决这个问题 App/Providers/AppServiceProvider.php boot()中添加 Schema::defaultStringLength(191);
+4:访问 Open http://localhost/admin/ in browser,use username admin and password admin to login.
+problems : 设置网站根目录
+ex:https://blog.csdn.net/deng0zhaotai/article/details/70236649
+5.1 修改httpd.conf文件
+5.2 修改httpd-vhosts.conf文件
+
+
+
